@@ -1,0 +1,19 @@
+project_name,dag_name,description,schedule_interval,schedule_description,start_date,end_date,owner,email_list,mail_on_success,retry_count,retry_delay,zone_list,max_active_runs,default_view,depends_on_past,wait_for_downstream,log_endpoint_id
+Tutorial,task-dag,,0 10 * * *,daily at 10:00,2021-11-10,2021-11-20,ekapop,fourplus.dev@gmail.com,FALSE,3,5,main,1,graph,TRUE,TRUE,
+Tutorial,relation-dag,,0 10 * * *,daily at 10:00,2021-11-10,2021-11-20,ekapop,fourplus.dev@gmail.com,FALSE,3,5,main,1,graph,TRUE,TRUE,
+Tutorial,branch-dag,,0 10 * * *,daily at 10:00,2021-11-10,2021-11-20,ekapop,fourplus.dev@gmail.com,FALSE,3,5,main,1,graph,TRUE,TRUE,
+Tutorial,python-dag,,0 10 * * *,daily at 10:00,2021-11-10,2021-11-20,ekapop,fourplus.dev@gmail.com,FALSE,3,5,main,1,graph,TRUE,TRUE,
+Tutorial,trigger,,0 10 * * *,daily at 10:00,2021-11-10,2021-11-20,ekapop,fourplus.dev@gmail.com,FALSE,3,5,main,1,graph,TRUE,TRUE,
+Tutorial,triggered,,,"trigger from ""trigger dag""",,,ekapop,fourplus.dev@gmail.com,FALSE,3,5,main,1,graph,TRUE,TRUE,
+Tutorial,sensor,,0 10 * * *,daily at 10:00,2021-11-10,2021-11-20,ekapop,fourplus.dev@gmail.com,FALSE,3,5,main,1,graph,TRUE,TRUE,
+Tutorial,multi-zone,test multi-zone,0 10 * * *,daily at 10:00,2021-11-10,2021-11-20,ekapop,fourplus.dev@gmail.com,FALSE,3,5,"zone1
+zone2, zone3",1,graph,TRUE,TRUE,
+Tutorial,natch,natch test,0 10 * * *,daily at 10:00,2021-11-10,2021-11-11,natch,natch@4amconsult.com,FALSE,1,5,main,1,graph,TRUE,TRUE,log1
+Tutorial,redshift,Redshift dag,0 10 * * *,daily at 10:00,2021-08-30,2021-09-02,tanatorn,fourplus.dev@gmail.com,FALSE,0,5,zone1,1,graph,TRUE,TRUE,
+Tutorial,demo,,0 10 * * *,daily at 10:00,2021-11-10,2021-11-11,tanatorn,fourplus.dev@gmail.com,FALSE,0,5,"input
+import
+export
+output",1,graph,TRUE,TRUE,
+Tutorial,wawa,wawa test,0 10 * * *,daily at 10:00,2021-11-10,2021-11-11,wawa,fourplus.dev@gmail.com,FALSE,1,5,main,1,graph,TRUE,TRUE,log2
+Tutorial,dutchmill-demo,,0 10 * * *,daily at 10:00,2022-01-01,2022-01-02,4plus,fourplus.dev@gmail.com,FALSE,0,5,main,1,graph,TRUE,TRUE,
+Tutorial,export,export 4nalyze test,0 10 * * *,daily at 10:00,2022-01-01,2022-01-02,tanatorn,fourplus.dev@gmail.com,FALSE,0,5,main,1,graph,TRUE,TRUE,

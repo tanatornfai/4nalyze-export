@@ -1,0 +1,12 @@
+project_name,dag_name,zone_name,sub_zone_name,job_name,detail,required_params,optional_params,variable_params,job_type,function_id,ASAT_DT_FLAG,retry_count,retry_delay,email_list,mail_on_success,task_id
+Tutorial,export,main,test_export,fb_insight_by_age_gender_daily,,"{
+            ""SOURCE_ENDPOINT_TYPE"" : ""DB"",
+            ""SOURCE_ENDPOINT_ID"" : ""4nalyze"",
+            ""ETL_HOST_ENDPOINT_ID"": ""4nalyze"",
+            ""SQL_TYPE"" : ""SQL_PATH"",
+            ""SQL_PATH"" : ""${AIRFLOW_ROOT}script/${JOB_NAME}.sql"",
+            ""TEMP_DIR"" : ""/home/ubuntu/export/"",
+            ""DESTINATION_ENDPOINT_ID"" : ""brt-cdp"",
+            ""DESTINATION_PATH"" : ""${PROCESS_DATE}/${JOB_NAME}/${JOB_NAME}_${PROCESS_DATE}.csv"",
+            ""SOURCE_OPTIONAL_ARGUMENTS"" : {""DELIMITER"": "","",""HEADER"":true}
+}",,,4nalyze_export,,,,,,,main.test_export.4nalyze_export_fb_insight_by_age_gender_daily
